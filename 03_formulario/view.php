@@ -6,7 +6,7 @@
     <title>Exemplo Formulário</title>
 </head>
 <body>
-    <form action="processa.php" method="POST">
+    <form action="logica.php" method="POST">
         <label for ="">Nome:</label>
         <input type="text" name="nome">
         <br>
