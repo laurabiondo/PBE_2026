@@ -17,7 +17,7 @@
         <img src="logo.png" width="15%">
         <h1>BEM VINDO!!!</h1>
 
-    <form action="logica.php" method="POST">
+    <form action="logica.php" method="POST" >
 
         
         <input type="text" name="nome" placeholder="Nome:" required>
