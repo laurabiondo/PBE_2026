@@ -9,11 +9,17 @@ class Pedido
 
    function adicionarItem($valor)
     {
-        $this->valor += $valor;
+        if ($this->status ="Aguardando"){
+            $this->valor += $valor;
+        }else{
+            echo "Não é possível adicionar itens o pedido esta $this->status <br>";
+        }
+
     }
     function cancelar()
     {
         $this->status = "Cancelado";
+        echo "Status alterado para $this->status <br>";
     }
     function finalizar()
     {
