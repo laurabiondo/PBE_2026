@@ -18,6 +18,7 @@ class Aula{
     public function trocarProfessor($novoProfessor)
     {
         $this->professor = $novoProfessor;
+     
     }
   
     public function alterarLocal($n_sala, $bloco)
@@ -26,5 +27,14 @@ class Aula{
         $this->bloco = $bloco;
     }
 }
+$aula = new Aula();
+
+$aula->disciplina = "Programação";
+$aula->professor = "Laura";
+$aula->duracao = "5 horas";
+$aula->numeroSala = 10;
+$aula->bloco = "A";
+
+$aula->exibirInformacoes();
 
 ?>
