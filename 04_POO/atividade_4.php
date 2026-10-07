@@ -6,19 +6,20 @@ class Pedido
     public $cliente;
     public $valor;
     public $status;
-    public function adicionarItem($valor)
+
+   function adicionarItem($valor)
     {
         $this->valor += $valor;
     }
-    public function cancelar()
+    function cancelar()
     {
         $this->status = "Cancelado";
     }
-    public function finalizar()
+    function finalizar()
     {
         $this->status = "Finalizado";
     }
-    public function exibirResumo()
+    function exibirResumo()
     {
         echo "Número: " . $this->numero . "<br>";
         echo "Cliente: " . $this->cliente . "<br>";

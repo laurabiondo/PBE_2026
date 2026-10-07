@@ -6,7 +6,7 @@ class Aula{
     public $numeroSala;
     public $bloco;
 
-    public function exibirInformacoes()
+   function exibirInformacoes()
     {
         echo "Disciplina: " . $this->disciplina . "<br>";
         echo "Professor: " . $this->professor . "<br>";
@@ -15,13 +15,13 @@ class Aula{
         echo "Bloco: " . $this->bloco . "<br>";
     }
 
-    public function trocarProfessor($novoProfessor)
+    function trocarProfessor($novoProfessor)
     {
         $this->professor = $novoProfessor;
      
     }
   
-    public function alterarLocal($n_sala, $bloco)
+    function alterarLocal($n_sala, $bloco)
     {
         $this->numeroSala = $n_sala;
         $this->bloco = $bloco;
