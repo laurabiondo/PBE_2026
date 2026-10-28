@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,15 +10,11 @@
     <form action="logica.php" method = "POST">
         <label for ="">Numero:</label>
         <input type="number" name="numero">
+        <br>
+         <label for ="">Numero:</label>
+        <input type="number" name="numero">
+        <br>
         <button type="submit">Enviar</button>
-            <select name = "Selecionar conta" required>
-                <option value="">Selecione a conta</option>
-                <option value="*">Multiplicação</option>
-                <option value="+">Soma</option>
-                <option value="-">Subtração</option>
-                <option value="/">Divisão</option>
-</select>
-
 
     </form>
 </body>

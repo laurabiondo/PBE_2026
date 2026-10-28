@@ -11,7 +11,7 @@ $professor = new Professor("Leonardo Evangelista", "leonardo@email.com",
 $turma = new Turma("INFO",$professor);
 
 // criar alunos
-$aluno = new Aluno("Ana Souza", 'ana@gmail.com', "B456");
+$aluno = new Aluno("Laura Biondo", 'Laura@gmail.com', "B456");
 $aluno->adicionarNota(8);
 $aluno->adicionarNota(7);
 $aluno->adicionarNota(9);
