@@ -4,21 +4,16 @@
 require_once "Aluno.php";
 require_once "Matricula.php";
 
-// Recebendo os dados do aluno
 $nome = $_POST["nome"];
 $peso = $_POST["peso"];
-$altura = $_POST["altura"];
+$altura = $_POST["altura"] ?? 0;
 
-// Recebendo os dados da matrícula
 $plano = $_POST["plano"];
 $meses = $_POST["meses"];
 
 
-$modalidades = [];
+$modalidades = $_POST ['modalidades'] ?? [];
 
-if (isset($_POST["modalidades"])) {
-    $modalidades = $_POST["modalidades"];
-}
 
 $aluno = new Aluno($nome, $peso, $altura);
 

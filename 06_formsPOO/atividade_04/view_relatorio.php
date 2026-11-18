@@ -7,53 +7,53 @@
 </head>
 <body>
 
-    <h1>Contrato de Matrícula - PowerFit</h1>
+    <h1>Contrato de Matrícula</h1>
 
-    <h2>Dados do Aluno</h2>
-
-    <p>
-        <strong>Nome:</strong>
-        <?= $matricula->getAluno()->getNome() ?>
-    </p>
-
-    <p>
-        <strong>IMC:</strong>
-        <?= number_format($matricula->getAluno()->calcularIMC(), 1, ",", ".") ?>
-    </p>
-
-    <p>
-        <strong>Classificação:</strong>
-        <?= $matricula->getAluno()->classificarIMC() ?>
-    </p>
-
-    <hr>
-
-    <h2>Valores da Matrícula</h2>
-
-    <table border="1" cellpadding="10">
+    <table border="1">
 
         <tr>
-            <th>Descrição</th>
-            <th>Valor mensal</th>
+            <th colspan="2">Dados do Aluno</th>
         </tr>
 
         <tr>
-            <td>Plano <?= $matricula->getPlano() ?></td>
+            <td>Nome</td>
+            <td><?= $matricula->getAluno()->getNome() ?></td>
+        </tr>
+
+        <tr>
+            <td>IMC</td>
+            <td><?= number_format($matricula->getAluno()->calcularIMC(), 1, ",", ".") ?></td>
+        </tr>
+
+        <tr>
+            <td>Classificação</td>
+            <td><?= $matricula->getAluno()->classificarIMC() ?></td>
+        </tr>
+
+        <tr>
+            <th colspan="2">Valores da Matrícula</th>
+        </tr>
+
+        <tr>
+            <td>Plano escolhido</td>
+            <td><?= $matricula->getPlano() ?></td>
+        </tr>
+
+        <tr>
+            <td>Valor do plano</td>
             <td>R$ <?= number_format($matricula->calcularValorPlano(), 2, ",", ".") ?></td>
         </tr>
 
         <?php foreach ($matricula->getModalidades() as $modalidade) { ?>
-
-            <tr>
-                <td><?= $modalidade ?></td>
-                <td>R$ <?= number_format($matricula->calcularValorModalidade($modalidade), 2, ",", ".") ?></td>
-            </tr>
-
+        <tr>
+            <td><?= $modalidade ?></td>
+            <td>R$ <?= number_format($matricula->calcularValorModalidade($modalidade), 2, ",", ".") ?></td>
+        </tr>
         <?php } ?>
 
         <tr>
-            <th>Mensalidade</th>
-            <th>R$ <?= number_format($matricula->calcularMensalidade(), 2, ",", ".") ?></th>
+            <td>Mensalidade total</td>
+            <td>R$ <?= number_format($matricula->calcularMensalidade(), 2, ",", ".") ?></td>
         </tr>
 
     </table>
@@ -73,4 +73,25 @@
     <p>
         <strong>Desconto (<?= $matricula->calcularPercentualDesconto() ?>%):</strong>
         R$ <?= number_format($matricula->calcularDesconto(), 2, ",", ".") ?>
-    
+    </p>
+
+    <h2>
+        Total do contrato:
+        R$ <?= number_format($matricula->calcularTotal(), 2, ",", ".") ?>
+    </h2>
+
+    <?php if ($matricula->calcularPercentualDesconto() > 0) { ?>
+
+        <p>
+            Parabéns! Você ganhou
+            <?= $matricula->calcularPercentualDesconto() ?>% de desconto.
+        </p>
+
+    <?php } else { ?>
+
+        <p>Dica: fechando 6 meses ou mais você ganha desconto.</p>
+
+    <?php } ?>
+
+</body>
+</html>

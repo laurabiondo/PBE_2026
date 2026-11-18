@@ -3,11 +3,11 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Academia PowerFit</title>
+    <title>Academia </title>
 </head>
 <body>
 
-    <h1>Academia PowerFit</h1>
+    <h1>Academia</h1>
     <h2>Cadastro de Matrícula</h2>
 
     <form action="logica.php" method="POST">

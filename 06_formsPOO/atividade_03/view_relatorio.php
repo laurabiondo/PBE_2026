@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +6,7 @@
 </head>
 <body>
 
-    <h1>Holerite - TechNova</h1>
+    <h1>Holerite </h1>
 
     <h3>Nome: <?= $funcionario->getNome(); ?></h3>
 

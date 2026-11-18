@@ -101,8 +101,8 @@ class Funcionario {
     
     public function calcularSalarioLiquido() {
 
-        return $this->calcularSalarioBruto()
-         $this->calcularINSS()
+        return $this->calcularSalarioBruto();
+         $this->calcularINSS();
          $this->calcularValeTransporte();
     }
 

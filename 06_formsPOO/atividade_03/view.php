@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>TechNova - Holerite</h1>
+    <h1>Holerite</h1>
 
     <form action="logica.php" method="POST">
 
